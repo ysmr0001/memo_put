@@ -1,0 +1,13 @@
+.postTitle
+  = @post.purpose
+.postDate
+  = @post.created_at
+.postAuthor
+.postManage
+  = link_to "編集", edit_post_path(@post.id), class: "postManage__edit"
+  = link_to "削除", post_path(@post.id), method: :delete, class: "postManage__delete"
+.postText
+  .content__mini ■自力で調べた内容
+  = simple_format @post.search
+  .content__mini ■仮説と検証作業の結果
+  = simple_format @post.result

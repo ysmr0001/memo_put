@@ -1,0 +1,10 @@
+.content__title
+  新規メモの作成
+= form_with model: @post, class: :form, local: true do |form|
+  .content__mini ■解決したいこと
+  = form.text_field :purpose, placeholder: :エラー文や、今起こっているトラブルを端的に書く, class: :form__title
+  .content__mini ■自力で調べた内容
+  = form.text_area :search, placeholder: :検索エンジンを用いた際の検索ワードについてや読んだ記事のリンクを書く, class: :form__text
+  .content__mini ■仮説と検証作業の結果
+  = form.text_area :result, placeholder: :検索して得た情報から立てた仮説と、その検証作業による結果を書く, class: :form__text
+  = form.submit '投稿する', class: :form__btn

@@ -1,0 +1,7 @@
+.content__title
+  投稿の編集
+= form_with model: @post, class: :form, local: true do |form|
+  = form.text_field :purpose, placeholder: :解決したいこと, class: :form__title
+  = form.text_area :search, placeholder: :自力で調べた内容, class: :form__text
+  = form.text_area :result, placeholder: :仮説と検証作業の結果, class: :form__text
+  = form.submit '投稿する', class: :form__btn
